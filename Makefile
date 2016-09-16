@@ -9,7 +9,7 @@ L=[01;30m
 
 comandos:
 	@echo ""
-	@echo "${B}Comandos disponibles para ${G}${NOMBRE}${N} - ${Y} versión ${VERSION}${N}"
+	@echo "${B}Comandos disponibles para ${G}${NOMBRE}${N} - ${Y}versión: ${VERSION}${N}"
 	@echo ""
 	@echo "  ${Y}Para desarrolladores${N}"
 	@echo ""
