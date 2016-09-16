@@ -42,7 +42,7 @@ version_major:
 
 actualizar_gitpages:
 	@echo "${G}actualizando gitpages ...${N}"
-	@ember github-pages:commit --message "Update gitpages." --environment=development
+	@ember github-pages:commit --message "Update gitpages."
 	@git push origin gh-pages:gh-pages
 	@echo ""
 	@echo "https://huayralinux.github.io/repo-frontend/"

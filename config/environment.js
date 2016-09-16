@@ -20,8 +20,6 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/repo-frontend/';
   }
 
   if (environment === 'test') {
