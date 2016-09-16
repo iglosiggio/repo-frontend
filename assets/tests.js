@@ -123,6 +123,15 @@ define('repo-frontend/tests/router.jshint', ['exports'], function (exports) {
     assert.ok(true, 'router.js should pass jshint.');
   });
 });
+define('repo-frontend/tests/routes/index.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/index.js should pass jshint.');
+  });
+});
 define('repo-frontend/tests/test-helper', ['exports', 'repo-frontend/tests/helpers/resolver', 'ember-qunit'], function (exports, _repoFrontendTestsHelpersResolver, _emberQunit) {
 
   (0, _emberQunit.setResolver)(_repoFrontendTestsHelpersResolver['default']);
@@ -134,6 +143,27 @@ define('repo-frontend/tests/test-helper.jshint', ['exports'], function (exports)
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass jshint.');
+  });
+});
+define('repo-frontend/tests/unit/routes/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:index', 'Unit | Route | index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('repo-frontend/tests/unit/routes/index-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/index-test.js should pass jshint.');
   });
 });
 /* jshint ignore:start */

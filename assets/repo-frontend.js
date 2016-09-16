@@ -209,6 +209,9 @@ define('repo-frontend/router', ['exports', 'ember', 'repo-frontend/config/enviro
 
   exports['default'] = Router;
 });
+define('repo-frontend/routes/index', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({});
+});
 define('repo-frontend/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _emberAjaxServicesAjax) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -216,6 +219,53 @@ define('repo-frontend/services/ajax', ['exports', 'ember-ajax/services/ajax'], f
       return _emberAjaxServicesAjax['default'];
     }
   });
+});
+define("repo-frontend/templates/index", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.3",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 0
+          }
+        },
+        "moduleName": "repo-frontend/templates/index.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("h1");
+        var el2 = dom.createTextNode("Index");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
+        return morphs;
+      },
+      statements: [["content", "outlet", ["loc", [null, [2, 0], [2, 10]]], 0, 0, 0, 0]],
+      locals: [],
+      templates: []
+    };
+  })());
 });
 /* jshint ignore:start */
 
@@ -249,7 +299,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("repo-frontend/app")["default"].create({"name":"repo-frontend","version":"0.0.0+9fa8ffbb"});
+  require("repo-frontend/app")["default"].create({"name":"repo-frontend","version":"0.1.0+10ef3254"});
 }
 
 /* jshint ignore:end */
