@@ -249,7 +249,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("repo-frontend/app")["default"].create({"name":"repo-frontend","version":"0.0.0+b5d872ee"});
+  require("repo-frontend/app")["default"].create({"name":"repo-frontend","version":"0.0.0+9fa8ffbb"});
 }
 
 /* jshint ignore:end */
