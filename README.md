@@ -1,53 +1,23 @@
 # Repo-frontend
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Una aplicación web que nos permite visualizar el estado del repositorio,
+las versiones de los paquetes y hacer consultas.
 
-## Prerequisites
+![](preview/main.png)
 
-You will need the following things properly installed on your computer.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Versión online
 
-## Installation
+Actualmente estamos publicando una versión de prueba en esta
+url: <a href="https://huayralinux.github.io/repo-frontend" target=_blank>https://huayralinux.github.io/repo-frontend</a>
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+## Como instalar
 
-## Running / Development
+Este proyecto se realizó usando ember-js, así que los pasos de instalación
+y prueba local son:
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+```
+npm install
+bower install
+ember serve
+```
