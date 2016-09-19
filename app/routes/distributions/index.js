@@ -5,8 +5,4 @@ export default Ember.Route.extend({
   model() {
     return this.get("api").getDistributions();
   },
-
-  beforeModel() {
-    return this.transitionTo('distributions.index');
-  }
 });

@@ -1,0 +1,29 @@
+{{outlet}}
+
+<h2 class="ui header">Distribuciones</h2>
+
+<table class="ui celled striped table">
+
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each model as |distribution|}}
+      <tr>
+        <!--<td class="collapsing"><i class="folder icon"></i></td>-->
+        <td class="collapsing">{{#link-to "distributions.show" distribution.Codename}}{{distribution.Codename}}{{/link-to}}</td>
+        <td class="">{{distribution.Description}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td>No hay dsitribuciones para mostrar.</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>

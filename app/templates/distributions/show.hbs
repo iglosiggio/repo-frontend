@@ -1,0 +1,35 @@
+{{#link-to "distributions" class="ui button"}}Regresar{{/link-to}}
+
+{{outlet}}
+
+<h2 class="ui header">Paquetes en {{model.distro}}</h2>
+
+<table class="ui celled striped table">
+
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Componente</th>
+      <th>Arquitecturas</th>
+      <th>Versión</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each model as |package|}}
+      <tr>
+        <!--<td class="collapsing"><i class="folder icon"></i></td>-->
+        <td class="">{{#link-to "packages.showPackage" package.package}}{{package.package}}{{/link-to}}</td>
+        <td class="collapsing">{{package.component}}</td>
+        <td class="collapsing">{{package.archs}}</td>
+        <td class="collapsing">{{package.version}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td>No hay dsitribuciones para mostrar.</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>
