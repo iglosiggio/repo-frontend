@@ -1,4 +1,8 @@
-{{#link-to "distributions" class="ui button"}}Regresar{{/link-to}}
+{{#repo-breadcrumbs}}
+  {{#link-to "index"}}distributions{{/link-to}}
+  /
+  {{model.distro}}
+{{/repo-breadcrumbs}}
 
 {{outlet}}
 
@@ -20,7 +24,7 @@
     {{#each model as |package|}}
       <tr>
         <!--<td class="collapsing"><i class="folder icon"></i></td>-->
-        <td class="">{{#link-to "packages.showPackage" package.package}}{{package.package}}{{/link-to}}</td>
+        <td class="">{{#link-to "packages.showPackage" package.package (query-params distribution=model.distro)}}{{package.package}}{{/link-to}}</td>
         <td class="collapsing">{{package.component}}</td>
         <td class="collapsing">{{package.archs}}</td>
         <td class="collapsing">{{package.version}}</td>

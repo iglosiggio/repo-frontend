@@ -1,0 +1,41 @@
+{{#repo-breadcrumbs}}
+  {{#link-to "index"}}distributions{{/link-to}} /
+  {{#link-to "distributions.show" model.distributionName}}{{model.distributionName}}{{/link-to}} /
+  {{#link-to "packages.showPackage" model.packageName}}{{model.packageName}}{{/link-to}} /
+  {{model.version}}
+{{/repo-breadcrumbs}}
+
+<h2 class="ui header">Paquete {{model.packageName}} ({{model.version}}) en {{model.packageName}}</h2>
+
+
+<ul>
+  {{#if model.striderURL}}
+    <li><a href={{model.striderURL}} target=_blank>URL al proyecto en strider</a></li>
+  {{/if}}
+
+  {{#if model.striderJobURL}}
+    <li><a href={{model.striderJobURL}} target=_blank>URL al build de strider</a></li>
+  {{/if}}
+
+  {{#if model.repoURL}}
+    <li><a href={{model.repoURL}} target=_blank>Link al repositorio</a></li>
+  {{/if}}
+
+  {{#if model.repoPackageURL}}
+    <li><a href={{model.repoPackageURL}} target=_blank>Link a repositorio (del paquete)</a></li>
+  {{/if}}
+
+  {{#if model.lastCommitURL}}
+    <li><a href={{model.lastCommitURL}} target=_blank>Link al commit relativo al build</a></li>
+  {{/if}}
+</ul>
+
+<p><b>Maintainer:</b> {{model.Maintainer}}</p>
+<p><b>InstalledSize:</b> {{model.InstalledSize}},</p>
+<p><b>Depends:</b> {{model.Depends}}</p>
+<p><b>Conflicts:</b> {{model.Conflicts}}</p>
+<p><b>Priority:</b> {{model.Priority}}</p>
+<p><b>Section:</b> {{model.Section}}</p>
+<p><b>Filename:</b> {{model.Filename}}</p>
+<p><b>Size:</b> {{model.Size}}</p>
+<p><b>Description:</b> {{model.Description}}</p>

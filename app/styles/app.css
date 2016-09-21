@@ -19,3 +19,11 @@ body {
   text-align: center;
   color: gray;
 }
+
+
+.repo-breadcrumbs-container {
+}
+
+tr.selected {
+  background-color: #e5f2f3 !important;
+}

@@ -1,4 +1,36 @@
-{{#link-to "distributions" class="ui button"}}Volver al listado de distribuciones{{/link-to}}
+{{#repo-breadcrumbs}}
+  {{#link-to "index"}}distributions{{/link-to}}
+  {{#if distribution}}
+    /
+    {{#link-to "distributions.show" distribution}}{{distribution}}{{/link-to}}
+  {{/if}}
+  /
+  {{model.packageName}}
+{{/repo-breadcrumbs}}
 
 
 <h2 class="ui header">Paquete {{model.packageName}}</h2>
+
+<table class="ui celled striped table">
+
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Versión</th>
+      <th>Distribución</th>
+      <th>Arquitecturas</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each model.versions as |version|}}
+      {{repo-packagerow package=model.package version=version currentDistribution=distribution}}
+    {{else}}
+      <tr>
+        <td colspan=4>No hay dsitribuciones para mostrar.</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>

@@ -13,5 +13,9 @@ export default Ember.Service.extend({
 
   getPackage(packageName) {
     return this.get('ajax').request(`/packages/${packageName}`);
+  },
+
+  getPackageInDistribution(distribution, packageName) {
+    return this.get('ajax').request(`/packages/${distribution}/${packageName}`);
   }
 });
