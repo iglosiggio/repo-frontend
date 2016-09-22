@@ -53,16 +53,14 @@ export default function() {
           'lastCommitURL': 'https://github.com/HuayraLinux/huayra-ritmos/commit/7140769dccb21d9f71641150cca0dd83ebda00f9',
 
           'Maintainer': 'Miguel Angel Garcia <miguel.garcia@gmail.com>',
-          'InstalledSize': 10368,
           'Depends': ['libnotify4', 'libssl1.0.0', 'libatk1.0-0', 'libpango1.0-0', 'libgtk2.0-0'],
           'Conflicts': ['libtdagent', 'tdagent'],
           'Priority': 'extra',
           'Section': 'non-free/utils',
-          'Filename': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_amd64.deb',
-          'Size': 2763726,
-          'SHA256': '4f52437222c9f9dff8c0f9f7aca7a3d2ffa9491e36a64b3fb7ed9f64b19f9402',
-          'SHA1': '1fe3aaef37ad61c3f0bd3a7b395ea2e9d4e2594e',
-          'MD5sum': 'f83a0e8327b9325d8d0515f0e0110dd4',
+
+          'DownloadURL_i386': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_i368.deb',
+          'DownloadURL_amd64': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_amd64.deb',
+
           'Description': 'Libraries and Agent of Theft Deterrent',
         }
       },
@@ -77,16 +75,13 @@ export default function() {
           'lastCommitURL': 'https://github.com/HuayraLinux/huayra-ritmos/commit/7140769dccb21d9f71641150cca0dd83ebda00f9',
 
           'Maintainer': 'Miguel Angel Garcia <miguel.garcia@gmail.com>',
-          'InstalledSize': 10368,
           'Depends': ['libnotify4', 'libssl1.0.0', 'libatk1.0-0', 'libpango1.0-0', 'libgtk2.0-0'],
           'Conflicts': ['libtdagent', 'tdagent'],
           'Priority': 'extra',
           'Section': 'non-free/utils',
-          'Filename': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_amd64.deb',
-          'Size': 2763726,
-          'SHA256': '4f52437222c9f9dff8c0f9f7aca7a3d2ffa9491e36a64b3fb7ed9f64b19f9402',
-          'SHA1': '1fe3aaef37ad61c3f0bd3a7b395ea2e9d4e2594e',
-          'MD5sum': 'f83a0e8327b9325d8d0515f0e0110dd4',
+          'DownloadURL_i386': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_i368.deb',
+          'DownloadURL_amd64': 'pool/non-free/h/huayra-tpm/huayra-tpm_2.0.0.117-3_amd64.deb',
+
           'Description': 'Libraries and Agent of Theft Deterrent',
         }
       }

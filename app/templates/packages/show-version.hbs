@@ -1,14 +1,18 @@
 {{#repo-breadcrumbs}}
   {{#link-to "index"}}distributions{{/link-to}} /
   {{#link-to "distributions.show" model.distributionName}}{{model.distributionName}}{{/link-to}} /
-  {{#link-to "packages.showPackage" model.packageName}}{{model.packageName}}{{/link-to}} /
-  {{model.version}}
+  {{model.packageName}}
 {{/repo-breadcrumbs}}
 
-<h2 class="ui header">Paquete {{model.packageName}} ({{model.version}}) en {{model.packageName}}</h2>
+<h2 class="ui header">Paquete
+  {{#link-to "packages.showPackage" model.packageName (query-params distribution=model.distributionName)}}{{model.packageName}}{{/link-to}}
+   ({{model.version}}) en {{#link-to "distributions.show" model.distributionName}}{{model.distributionName}}{{/link-to}}</h2>
 
+<p>{{model.Description}}</p>
 
 <ul>
+  <li>{{#link-to "packages.showPackage" model.packageName (query-params distribution=model.distributionName)}}Ver qué versiones hay en otras distribuciones{{/link-to}}</li>
+
   {{#if model.striderURL}}
     <li><a href={{model.striderURL}} target=_blank>URL al proyecto en strider</a></li>
   {{/if}}
@@ -28,14 +32,20 @@
   {{#if model.lastCommitURL}}
     <li><a href={{model.lastCommitURL}} target=_blank>Link al commit relativo al build</a></li>
   {{/if}}
+
+  {{#if model.DownloadURL_i386}}
+    <li><a href={{model.DownloadURL_i386}} target=_blank>Descargar .deb para i386</a></li>
+  {{/if}}
+
+  {{#if model.DownloadURL_amd64}}
+    <li><a href={{model.DownloadURL_amd64}} target=_blank>Descargar .deb para amd64</a></li>
+  {{/if}}
+
+
 </ul>
 
 <p><b>Maintainer:</b> {{model.Maintainer}}</p>
-<p><b>InstalledSize:</b> {{model.InstalledSize}},</p>
-<p><b>Depends:</b> {{model.Depends}}</p>
-<p><b>Conflicts:</b> {{model.Conflicts}}</p>
+<p><b>Depends:</b> {{repo-inline-package-list distro=model.distributionName packages=model.Depends}}</p>
+<p><b>Conflicts:</b> {{repo-inline-package-list distro=model.distributionName packages=model.Conflicts}}</p>
 <p><b>Priority:</b> {{model.Priority}}</p>
 <p><b>Section:</b> {{model.Section}}</p>
-<p><b>Filename:</b> {{model.Filename}}</p>
-<p><b>Size:</b> {{model.Size}}</p>
-<p><b>Description:</b> {{model.Description}}</p>
